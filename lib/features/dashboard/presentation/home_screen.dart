@@ -354,7 +354,7 @@ class HomeScreen extends ConsumerWidget {
                 
                 // Quick Actions section
                 Text(
-                  'Quick Tools',
+                  'Community Services & Tools',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 12),
@@ -362,10 +362,52 @@ class HomeScreen extends ConsumerWidget {
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   crossAxisCount: 3,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                  childAspectRatio: 1.1,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 1.05,
                   children: [
+                    _buildQuickAction(
+                      context,
+                      icon: Icons.people_outline,
+                      label: 'Community',
+                      onTap: () => context.push('/community'),
+                    ),
+                    _buildQuickAction(
+                      context,
+                      icon: Icons.verified_outlined,
+                      label: 'Scholar Q&A',
+                      onTap: () => context.push('/scholars'),
+                    ),
+                    _buildQuickAction(
+                      context,
+                      icon: Icons.shield_outlined,
+                      label: 'Anonymous Aid',
+                      onTap: () => context.push('/anonymous-help'),
+                    ),
+                    _buildQuickAction(
+                      context,
+                      icon: Icons.mosque_outlined,
+                      label: 'Mosque Finder',
+                      onTap: () => context.push('/mosques'),
+                    ),
+                    _buildQuickAction(
+                      context,
+                      icon: Icons.storefront_outlined,
+                      label: 'Halal Directory',
+                      onTap: () => context.push('/directory'),
+                    ),
+                    _buildQuickAction(
+                      context,
+                      icon: Icons.volunteer_activism_outlined,
+                      label: 'Charity Relief',
+                      onTap: () => context.push('/charity'),
+                    ),
+                    _buildQuickAction(
+                      context,
+                      icon: Icons.event_outlined,
+                      label: 'Islamic Events',
+                      onTap: () => context.push('/events'),
+                    ),
                     _buildQuickAction(
                       context,
                       icon: Icons.menu_book_outlined,
@@ -377,12 +419,6 @@ class HomeScreen extends ConsumerWidget {
                       icon: Icons.bookmark_added_outlined,
                       label: 'Dua Library',
                       onTap: () => context.push('/duas'),
-                    ),
-                    _buildQuickAction(
-                      context,
-                      icon: Icons.notifications_active_outlined,
-                      label: 'Reminders',
-                      onTap: () => context.push('/reminders'),
                     ),
                   ],
                 ),
