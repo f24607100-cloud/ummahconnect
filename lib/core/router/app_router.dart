@@ -23,6 +23,11 @@ import '../../features/directory/presentation/business_directory_screen.dart';
 import '../../features/mosques/presentation/mosque_finder_screen.dart';
 import '../../features/events/presentation/events_screen.dart';
 
+// Step 3 AI Feature Imports
+import '../../features/ai_tutor/presentation/ai_quran_tutor_screen.dart';
+import '../../features/learning_path/presentation/learning_path_screen.dart';
+import '../../features/ai_coach/presentation/ai_habit_coach_screen.dart';
+
 final appRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     initialLocation: '/splash',
@@ -108,6 +113,20 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/events',
         builder: (context, state) => const EventsScreen(),
+      ),
+
+      // Step 3 Advanced AI Routes
+      GoRoute(
+        path: '/ai-tutor',
+        builder: (context, state) => const AiQuranTutorScreen(),
+      ),
+      GoRoute(
+        path: '/learning-path',
+        builder: (context, state) => const LearningPathScreen(),
+      ),
+      GoRoute(
+        path: '/habit-coach',
+        builder: (context, state) => const AiHabitCoachScreen(),
       ),
     ],
   );

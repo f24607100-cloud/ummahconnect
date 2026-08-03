@@ -352,7 +352,66 @@ class HomeScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 24),
                 
-                // Quick Actions section
+                // Advanced AI Features section
+                Text(
+                  'Advanced AI Features',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 12),
+                Row(
+                  children: [
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () => context.push('/ai-tutor'),
+                        child: GlassCard(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            children: [
+                              Icon(Icons.mic_external_on, color: isDark ? AppColors.gold : AppColors.lightPrimary, size: 24),
+                              const SizedBox(height: 6),
+                              const Text('AI Quran Tutor', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () => context.push('/learning-path'),
+                        child: GlassCard(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            children: [
+                              Icon(Icons.auto_awesome, color: isDark ? AppColors.gold : AppColors.lightPrimary, size: 24),
+                              const SizedBox(height: 6),
+                              const Text('Learning Path', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () => context.push('/habit-coach'),
+                        child: GlassCard(
+                          padding: const EdgeInsets.all(12),
+                          child: Column(
+                            children: [
+                              Icon(Icons.psychology, color: isDark ? AppColors.gold : AppColors.lightPrimary, size: 24),
+                              const SizedBox(height: 6),
+                              const Text('AI Habit Coach', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 24),
+
+                // Community Services section
                 Text(
                   'Community Services & Tools',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
