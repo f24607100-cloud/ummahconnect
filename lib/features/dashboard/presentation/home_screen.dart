@@ -440,16 +440,18 @@ class HomeScreen extends ConsumerWidget {
     return GestureDetector(
       onTap: onTap,
       child: GlassCard(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: isDark ? AppColors.gold : AppColors.lightPrimary, size: 24),
-            const SizedBox(height: 8),
+            Icon(icon, color: isDark ? AppColors.gold : AppColors.lightPrimary, size: 22),
+            const SizedBox(height: 6),
             Text(
               label,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
             ),
           ],
         ),
