@@ -28,7 +28,7 @@ class _CharityScreenState extends ConsumerState<CharityScreen> {
       builder: (context) {
         final isDark = Theme.of(context).brightness == Brightness.dark;
 
-        return StatefulWidget(
+        return StatefulBuilder(
           builder: (context, setModalState) {
             return Container(
               padding: EdgeInsets.only(
