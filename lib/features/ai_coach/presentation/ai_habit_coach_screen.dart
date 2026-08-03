@@ -72,7 +72,7 @@ class AiHabitCoachScreen extends ConsumerWidget {
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: isDark ? Colors.white05 : Colors.black.withValues(alpha: 0.03),
+                          color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.black.withValues(alpha: 0.03),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(

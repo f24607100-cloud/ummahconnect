@@ -162,7 +162,7 @@ class _AiQuranTutorScreenState extends State<AiQuranTutorScreen> {
                         width: double.infinity,
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: isDark ? Colors.white05 : Colors.black.withValues(alpha: 0.03),
+                          color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.black.withValues(alpha: 0.03),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Text(
@@ -305,7 +305,7 @@ class _AiQuranTutorScreenState extends State<AiQuranTutorScreen> {
                             child: Container(
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: isDark ? Colors.white05 : Colors.black.withValues(alpha: 0.03),
+                                color: isDark ? Colors.white.withValues(alpha: 0.05) : Colors.black.withValues(alpha: 0.03),
                                 borderRadius: BorderRadius.circular(8),
                                 border: Border.all(color: Colors.orange.withValues(alpha: 0.3)),
                               ),
