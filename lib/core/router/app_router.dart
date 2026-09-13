@@ -27,6 +27,7 @@ import '../../features/events/presentation/events_screen.dart';
 import '../../features/ai_tutor/presentation/ai_quran_tutor_screen.dart';
 import '../../features/learning_path/presentation/learning_path_screen.dart';
 import '../../features/ai_coach/presentation/ai_habit_coach_screen.dart';
+import '../../features/quran/presentation/surah_reader_screen.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -127,6 +128,14 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/habit-coach',
         builder: (context, state) => const AiHabitCoachScreen(),
+      ),
+      GoRoute(
+        path: '/quran/reader',
+        builder: (context, state) {
+          final numStr = state.uri.queryParameters['surah'];
+          final surahNum = numStr != null ? int.tryParse(numStr) ?? 1 : 1;
+          return SurahReaderScreen(initialSurahNumber: surahNum);
+        },
       ),
     ],
   );
