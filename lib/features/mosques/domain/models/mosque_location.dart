@@ -8,6 +8,9 @@ class MosqueLocation {
   final String jummahTime;
   final Map<String, String> prayerTimes;
   final String imagePlaceholder;
+  final double? rating;
+  final int? userRatingsTotal;
+  final String source;
 
   MosqueLocation({
     required this.id,
@@ -19,6 +22,9 @@ class MosqueLocation {
     required this.jummahTime,
     required this.prayerTimes,
     required this.imagePlaceholder,
+    this.rating,
+    this.userRatingsTotal,
+    this.source = 'OpenStreetMap',
   });
 
   String get googleMapsUrl {
@@ -39,6 +45,9 @@ class MosqueLocation {
       'jummahTime': jummahTime,
       'prayerTimes': prayerTimes,
       'imagePlaceholder': imagePlaceholder,
+      'rating': rating,
+      'userRatingsTotal': userRatingsTotal,
+      'source': source,
     };
   }
 
@@ -54,6 +63,9 @@ class MosqueLocation {
       jummahTime: map['jummahTime'] ?? '12:45 PM',
       prayerTimes: Map<String, String>.from(rawTimes),
       imagePlaceholder: map['imagePlaceholder'] ?? 'mosque_1',
+      rating: (map['rating'] is num) ? (map['rating'] as num).toDouble() : null,
+      userRatingsTotal: map['userRatingsTotal'] as int?,
+      source: map['source'] ?? 'OpenStreetMap',
     );
   }
 }
